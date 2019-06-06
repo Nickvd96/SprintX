@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
 
 	private bool FacingRight;
 
+	[SerializeField]
+	private Transform[] groundPoints;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,5 +54,13 @@ public class Player : MonoBehaviour
 
     		transform.localScale = theScale;
     	}
+    }
+    private bool isGrounded()
+    {
+    	if(myRigidbody.velocity.y <= 0)
+    	{
+    		
+    	}
+
     }
 }
